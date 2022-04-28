@@ -3,6 +3,7 @@ import '../styles/homepage.css'
 import '../styles/detail.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import '../styles/checkout.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
