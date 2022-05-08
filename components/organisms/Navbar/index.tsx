@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Menu from './Menu'
+import Auth from './Auth'
+import ToggleMenu from './ToggleMenu'
 
 export default function Navbar() {
     return (
@@ -11,10 +13,7 @@ export default function Navbar() {
                         <a className="navbar-brand" href="/#">
                             <Image src="/icon/logo.svg" width={60} height={60} />
                         </a>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
+                        <ToggleMenu />
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
                                 <Menu title="Home" active />
@@ -22,11 +21,7 @@ export default function Navbar() {
                                 <Menu title="Reward" />
                                 <Menu title="Discover" />
                                 <Menu title="Global Rank" />
-                                <li className="nav-item my-auto">
-                                    <a className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
-                                        href="./src/sign-in.html" role="button">Sign
-                                        In</a>
-                                </li>
+                                <Auth isLogin />
                             </ul>
                         </div>
                     </div>
